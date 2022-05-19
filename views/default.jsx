@@ -10,6 +10,7 @@ function Def (html)
                 </title>
             </head>
             <body>
+                <p>This is from Default</p>
                 {html.children}
             </body>
         </html>
