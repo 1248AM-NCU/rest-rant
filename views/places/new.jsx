@@ -8,27 +8,27 @@ function New() {
                 <form method="POST" action="/places">
                     <div className="form-group">
                         <label htmlFor="name">Restaurant Name</label>
-                        <input type="text" id="name" required></input>
+                        <input className="form-control" type="text" id="name" name="name" required></input>
                     </div>
                     <div className="form-group">
                         <label htmlFor="year">Year Established</label>
-                        <input type="number" id="year"></input>
+                        <input className="form-control" type="number" id="year" name="year"></input>
                     </div>
                     <div className="form-group">
                         <label htmlFor="img">Picture</label>
-                        <input type="url" id="img"></input>
+                        <input className="form-control" type="url" id="img" name="img"></input>
                     </div>
                     <div className="form-group">
                         <label htmlFor="city">City</label>
-                        <input type="text" id="city"></input>
+                        <input className="form-control" type="text" id="city" name="city"></input>
                     </div>
                     <div className="form-group">
                         <label htmlFor="state">State</label>
-                        <input type="text" id="state"></input>
+                        <input className="form-control" type="text" id="state" name="state"></input>
                     </div>
                     <div className="form-group">
                         <label htmlFor="food">Cuisines</label>
-                        <input type="text" id="food" required></input>
+                        <input className="form-control" type="text" id="food" name="food"required></input>
                     </div>
                     <input className="btn btn-primary" type="submit" value="Submit"></input>
 
