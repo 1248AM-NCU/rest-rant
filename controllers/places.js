@@ -7,9 +7,9 @@ router.get('/new', (req, res) => {
 
 })
 router.get('/:index', (req, res,) => {
-  console.log("Tried index")
-  //if(req.params.index >= places.length - 1) res.render('error404')
-  res.render('places/details', places[req.params.index] )
+  let index = req.params.index;
+  if(isNaN(index) | !places[index]) res.render('error404')
+  res.render('places/details', places[index] )
 })
 router.get('/', (req, res,) => {      
     res.render('places/index', { places })
