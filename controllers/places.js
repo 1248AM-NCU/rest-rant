@@ -9,7 +9,7 @@ router.get('/new', (req, res) => {
 router.get('/:index', (req, res,) => {
   let index = req.params.index;
   if(isNaN(index) | !places[index]) res.render('error404')
-  res.render('places/details', places[index] )
+  res.render('places/details', { place:places[index], index } )
 })
 router.get('/', (req, res,) => {      
     res.render('places/index', { places })
@@ -29,5 +29,20 @@ router.post('/', (req, res) => {
   places.push(req.body)
   res.redirect(`places/${places.length - 1}`)
 })
+router.delete('/:index', (req, res) => {
+  console.log("Deleted place")
+  let index = Number(req.params.index)
+  if (isNaN(index)) {
+    res.render('error404')
+  }
+  else if (!places[index]) {
+    res.render('error404')
+  }
+  else {
+    places.splice(index, 1)
+    res.send('STUB DELETE places/:index')
+  }
+})
+
 
 module.exports = router
