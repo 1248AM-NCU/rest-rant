@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('*', (req, res) => {
+    console.log("Failed to get page")
     res.render('error404')
 })
 

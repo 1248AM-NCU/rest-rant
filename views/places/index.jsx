@@ -8,9 +8,9 @@ function index(data) {
                 <div className="col-sm-6">
                     <h2>{place.name}</h2>
                     <p className="text-center">
-                    {place.cuisines}
+                    {place.food}
                     </p>
-                    <img src={place.pic} alt={place.name}></img>
+                    <img src={place.img} alt={place.name}></img>
                     <p className="text-center">
                         Located in {place.city}, {place.state}
                     </p>
