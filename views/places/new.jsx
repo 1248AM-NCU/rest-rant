@@ -31,7 +31,6 @@ function New() {
                         <input className="form-control" type="text" id="food" name="food"required></input>
                     </div>
                     <input className="btn btn-primary" type="submit" value="Submit"></input>
-
                 </form>
             </main>
         </Del>

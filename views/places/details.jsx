@@ -10,7 +10,7 @@ function details(data) {
             <p>Located in {data.place.state}, {data.place.city}</p>
             <p>Serves {data.place.food}</p>
             <p>Established in {data.place.year}</p>
-            <a href="" className="btn btn-warning">
+            <a href={`${data.index}/edit`} className="btn btn-warning">
                 Edit
             </a>
             <form method="POST" action={`/places/${data.index}?_method=DELETE`}>

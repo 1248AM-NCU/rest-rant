@@ -6,6 +6,18 @@ router.get('/new', (req, res) => {
     res.render('places/new', {places})
 
 })
+router.get('/:id/edit', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+      res.render('error404')
+  }
+  else if (!places[id]) {
+      res.render('error404')
+  }
+  else {
+    res.render('places/edit', { place: places[id] })
+  }
+})
 router.get('/:index', (req, res,) => {
   let index = req.params.index;
   if(isNaN(index) | !places[index]) res.render('error404')
@@ -14,6 +26,7 @@ router.get('/:index', (req, res,) => {
 router.get('/', (req, res,) => {      
     res.render('places/index', { places })
 })
+
 router.post('/', (req, res) => {
   console.log(req.body)
   if (!req.body.pic) {
@@ -40,7 +53,7 @@ router.delete('/:index', (req, res) => {
   }
   else {
     places.splice(index, 1)
-    res.send('STUB DELETE places/:index')
+    res.render('places/index', {places})
   }
 })
 
