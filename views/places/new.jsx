@@ -11,8 +11,16 @@ function New() {
                         <input className="form-control" type="text" id="name" name="name" required></input>
                     </div>
                     <div className="col-sm-6 col-md-4 col-lg-3">
-                        <label htmlFor="year">Year Founded</label>
-                        <input className="form-control" type="number" id="year" name="year"></input>
+                        <div className="form-group col-sm-4">
+                            <label htmlFor="year">Founded Year</label>
+                            <input
+                                type="number"
+                                className="form-control"
+                                id="year"
+                                name="year"
+                                value={new Date().getFullYear()} />
+                        </div>
+
                     </div>
                     <div className="col-sm-6 col-md-4 col-lg-3">
                         <label htmlFor="pic">Picture</label>
@@ -28,7 +36,7 @@ function New() {
                     </div>
                     <div className="col-sm-6 col-md-4 col-lg-3">
                         <label htmlFor="food">Cuisines</label>
-                        <input className="form-control" type="text" id="food" name="food"required></input>
+                        <input className="form-control" type="text" id="food" name="food" required></input>
                     </div>
                     <input className="btn btn-primary" type="submit" value="Submit"></input>
                 </form>

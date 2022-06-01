@@ -5,11 +5,14 @@ function details(data) {
     return (
         <Def>
             <h1>Place details</h1>
-            <img className="detailImg" src={data.place.img} alt="Image of restaurant"></img>
+            <img className="detailImg" src={data.place.pic} alt="Image of restaurant"></img>
             <h2>{data.place.name}</h2>
-            <p>Located in {data.place.state}, {data.place.city}</p>
-            <p>Serves {data.place.food}</p>
-            <p>Established in {data.place.year}</p>
+            <h2>Description</h2>
+            <h3>
+                {data.place.showEstablished()}
+            </h3>
+            
+            <h4>Serving {data.place.food}</h4>
             <a href={`${data.index}/edit`} className="btn btn-warning">
                 Edit
             </a>
