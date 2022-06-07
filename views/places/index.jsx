@@ -2,6 +2,7 @@ const React = require("react")
 const Def = require("../default.jsx")
 
 function index(data) {
+    console.log(data)
     let placesFormatted = data.places.map(
         (place) => {
             return (
