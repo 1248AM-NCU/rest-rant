@@ -6,6 +6,9 @@
   "engines": {
     "node":"16.13.1"
   },
+  "scripts": {
+    "start": "echo \"STOP ASKING FOR A START SCRIPT\""
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
