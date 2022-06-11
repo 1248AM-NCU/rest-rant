@@ -7,7 +7,7 @@
     "node":"16.13.1"
   },
   "scripts": {
-    "start": "echo \"STOP ASKING FOR A START SCRIPT\""
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
