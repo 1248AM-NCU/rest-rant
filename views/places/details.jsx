@@ -23,13 +23,14 @@ function details( data ) {
         for (let i = 0; i < averageRating; i++) {
             stars += '★'
         }
-    }
-
-    rating = (
+        rating = (
         <h3>
             {stars} stars
         </h3>
-    )
+        )
+    }
+
+    
     if (data.place.comments.length) {
         comments = data.place.comments.map(c => {
             return (
